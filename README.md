@@ -6,6 +6,19 @@ whole company raises together.
 
 Deployed on Vercel from `main`; every pull request gets a preview deployment.
 
+## Development
+
+A Next.js App Router site exported as static files (`output: "export"`).
+
+```bash
+pnpm install
+pnpm dev     # http://localhost:3000
+pnpm build   # static site in out/
+```
+
+Copy lives in `content/zh.ts` and `content/en.ts`; the live product preview in the hero is
+`public/app/capy-app.js` (Capybara's conversation page, mounted in a shadow root).
+
 ## Contributing
 
 Changes reach `main` through pull requests linked to an issue, like every capybara-hq repository.
