@@ -1,0 +1,33 @@
+# CLA check: calls the shared CLA workflow from capybara-hq/.github. Separate from ci.yml and NOT
+# part of `ci-ok`. PR events arrive through workflow_run after pr-event.yml recorded the PR number;
+# the signing sentence and `recheck` arrive as issue_comment. Both run this file from the default
+# branch with a write token and must never check out or run the PR's code.
+# It sets the commit status `cla` on PR heads and comments the signing instructions. Signatures live
+# on the `cla-signatures` branch of this repo at signatures/v1/cla.json; no ruleset may cover that
+# branch. Closed PRs are locked so signature comments stay as they were.
+name: cla
+on:
+  workflow_run:
+    workflows: [pr-event]
+    types: [completed]
+  issue_comment:
+    types: [created]
+# No workflow-level grants: the token gets write scopes only inside the called jobs (M-5).
+permissions: {}
+jobs:
+  cla:
+    # Comments act only on PR comments that are the signing sentence or the recheck phrase.
+    if: >-
+      github.event_name == 'workflow_run' ||
+      (github.event.issue.pull_request &&
+      (github.event.comment.body == 'recheck' ||
+      github.event.comment.body == 'I have read the CLA Document and I hereby sign the CLA'))
+    permissions:
+      actions: read
+      contents: write
+      pull-requests: write
+      statuses: write
+    uses: capybara-hq/.github/.github/workflows/cla.yml@v2
+    with:
+      document-url: https://github.com/capybara-hq/core/blob/main/CLA.md
+      allowlist: grant-chao,dependabot[bot],github-actions[bot],changeset-bot,changeset-bot[bot]
