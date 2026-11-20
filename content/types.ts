@@ -76,7 +76,7 @@ export interface Dict {
     title: string;
     lead: string;
     items: ReadonlyArray<{ title: string; desc: string }>;
-    meta1: string;
+    discuss: string;
   };
-  footer: { license: string; meta1: string };
+  footer: { license: string; discuss: string };
 }

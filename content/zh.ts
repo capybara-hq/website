@@ -92,13 +92,13 @@ export const zh: Dict = {
   },
   contact: {
     title: "一起把它养大",
-    lead: "问题、想法和插件都欢迎。需要在公司里落地，可以找 meta1。",
+    lead: "问题、想法和插件都欢迎，路线图和讨论都公开在 GitHub。",
     items: [
       { title: "提问题与想法", desc: "在 GitHub 开 issue 或参与讨论，路线图也在那里。" },
       { title: "写插件", desc: "模型、渠道、连接器、执行环境、存储，每个扩展点都可以贡献实现。" },
-      { title: "企业落地", desc: "meta1 提供驻场实施：梳理场景、对接系统、部署和交接。" },
+      { title: "在公司里落地", desc: "部署、对接内部系统时遇到问题，到讨论区提问，社区和维护者都会回复。" },
     ],
-    meta1: "企业实施：meta1",
+    discuss: "GitHub 讨论区",
   },
-  footer: { license: "Capybara 以 Apache-2.0 协议开源", meta1: "企业实施" },
+  footer: { license: "Capybara 以 Apache-2.0 协议开源", discuss: "讨论区" },
 };

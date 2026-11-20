@@ -39,7 +39,7 @@ export function Footer() {
           <span>{t.footer.license}</span>
           <span className="r">
             <a href="https://github.com/capybara-hq">GitHub</a>
-            <a href="https://meta1.top">{t.footer.meta1}</a>
+            <a href="https://github.com/capybara-hq/core/discussions">{t.footer.discuss}</a>
           </span>
         </div>
       </div>

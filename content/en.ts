@@ -89,13 +89,13 @@ export const en: Dict = {
   },
   contact: {
     title: "Raise it together",
-    lead: "Questions, ideas and plugins are all welcome. To put it to work at your company, talk to meta1.",
+    lead: "Questions, ideas and plugins are all welcome; the roadmap and discussions are public on GitHub.",
     items: [
       { title: "Questions and ideas", desc: "Open an issue or join the discussion on GitHub; the roadmap lives there too." },
       { title: "Write plugins", desc: "Models, channels, connectors, execution environments, storage: every extension point takes contributions." },
-      { title: "Enterprise rollout", desc: "meta1 offers on-site implementation: use cases, system integration, deployment and handover." },
+      { title: "Rolling it out at work", desc: "Stuck deploying it or connecting internal systems? Ask in Discussions; the community and maintainers answer." },
     ],
-    meta1: "Enterprise: meta1",
+    discuss: "GitHub Discussions",
   },
-  footer: { license: "Capybara is open source under Apache-2.0", meta1: "Enterprise" },
+  footer: { license: "Capybara is open source under Apache-2.0", discuss: "Discussions" },
 };

@@ -157,8 +157,8 @@ export function Contact() {
             <Icon name="github" />
             <span>capybara-hq/core</span>
           </a>
-          <a className="btn secondary" href="https://meta1.top">
-            <span>{t.contact.meta1}</span>
+          <a className="btn secondary" href="https://github.com/capybara-hq/core/discussions">
+            <span>{t.contact.discuss}</span>
             <Icon name="arrow" />
           </a>
         </div>
